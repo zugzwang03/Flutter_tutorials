@@ -1,0 +1,6 @@
+it is like extracting a widget and placing it separately as a StatelessWidget somewhere else, so that object creation becomes easy
+use final keyword, as well as required 
+also you can import another widget from another dart file.
+
+final Quote quote;
+  QuoteCard({required this.quote});

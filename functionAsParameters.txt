@@ -1,0 +1,24 @@
+.map((quote) => QuoteCard(
+                quote: quote,
+                delete: () {
+                  setState(() {
+                    quotes.remove(quote);
+                  });
+                }))
+
+
+                 final Quote quote;
+  final VoidCallback delete;
+  QuoteCard({required this.quote, required this.delete});
+
+   TextButton.icon(
+              onPressed: delete,
+              label: Text(
+                'Delete the icon',
+                style: TextStyle(color: Colors.black),
+              ),
+              icon: Icon(
+                Icons.delete,
+                color: Colors.black,
+              ),
+            ),

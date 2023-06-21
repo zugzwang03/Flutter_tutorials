@@ -1,0 +1,35 @@
+void main() {
+  runApp(MaterialApp(
+    home: MyWidget(),
+  ));
+}
+
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Flutter App'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Center(
+        child: Text(
+          'Inside view',
+          style: TextStyle(
+            color: Colors.red[500],
+            fontWeight: FontWeight.normal,
+            fontSize: 20.0,
+            letterSpacing: 3.0,
+          ),)
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color.fromARGB(255, 211, 115, 4),        
+        child: Text('Click'),
+        ),
+    );
+  }
+}

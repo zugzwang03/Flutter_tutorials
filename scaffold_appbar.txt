@@ -1,0 +1,17 @@
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text('My Flutter App'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Text('Inside view')
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Text('Click'),
+        ),
+    ),
+  ));
+}

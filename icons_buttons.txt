@@ -1,0 +1,35 @@
+ child: Icon(
+    Icons.airport_shuttle,
+    color: Colors.blue,
+    size: 60.0,
+)
+
+child: ElevatedButton(
+          onPressed: () {
+            print('Clicked!');
+          },
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.black12)
+          ),
+          child: Text('Raised button, but now elevated button'),
+ ),
+
+child: ElevatedButton.icon(
+          onPressed: () {
+            print('Clicked!');
+          },
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.black12)
+          ),
+          icon: Icon(
+            Icons.mail_lock_outlined
+          ),
+          label: Text('Mail me!'),
+),
+
+IconButton(
+              onPressed: () {}, 
+              icon: Icon(
+                Icons.zoom_out_map_sharp
+              )
+          ),

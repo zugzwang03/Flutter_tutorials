@@ -1,0 +1,40 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
+import 'package:flutter/material.dart';
+import 'quote.dart';
+void main() {
+  runApp(MaterialApp(
+    home: QuoteList(),
+  ));
+}
+
+class QuoteList extends StatefulWidget {
+  const QuoteList({super.key});
+
+  @override
+  State<QuoteList> createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+  List<Quote> quotes = [
+    Quote("Do it.", "author1"), 
+    Quote("Don't stop", "author2"),
+    Quote("Continue working.", "author3"),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[200],
+      appBar: AppBar(
+        title: Text('Awesome Quotes'),
+        centerTitle: true,
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Column(
+        children: quotes.map((quote) {
+          return Text('${quote.text} - ${quote.author}');
+        }).toList(),
+      ),
+    );
+  }
+}
